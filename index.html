@@ -9,7 +9,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --blue:#185FA5;--blue-light:#E6F1FB;--blue-mid:#B5D4F4;--blue-dark:#0C447C;
-  --teal:#0F6E56;--teal-light:#E1F5EE;--teal-mid:#9FE1CB;
+  --teal:#0F6E56;--teal-light:#E1F5EE;
   --amber:#854F0B;--amber-light:#FAEEDA;
   --coral:#993C1D;--coral-light:#FAECE7;
   --purple:#534AB7;--purple-light:#EEEDFE;
@@ -22,9 +22,6 @@
   --shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
 }
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg3);color:var(--text);min-height:100vh;font-size:15px}
-a{color:var(--blue);text-decoration:none}
-
-/* LAYOUT */
 .app-wrapper{max-width:900px;margin:0 auto;padding:1.5rem 1rem}
 .header{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-xl);padding:1.25rem 1.5rem;margin-bottom:1rem;display:flex;align-items:center;gap:14px}
 .logo-mark{width:42px;height:42px;background:var(--blue);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -33,8 +30,6 @@ a{color:var(--blue);text-decoration:none}
 .logo-name{font-size:20px;font-weight:600;color:var(--text);letter-spacing:0.06em}
 .logo-sub{font-size:12px;color:var(--text2);margin-top:1px}
 .logo-tag{font-size:12px;color:var(--blue);font-style:italic;margin-left:auto;text-align:right;line-height:1.4;max-width:200px}
-
-/* SEARCH */
 .search-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-xl);padding:1.25rem 1.5rem;margin-bottom:1rem}
 .search-label{font-size:13px;color:var(--text2);margin-bottom:8px;display:flex;align-items:center;gap:6px}
 .search-row{display:flex;gap:8px}
@@ -45,16 +40,12 @@ a{color:var(--blue);text-decoration:none}
 .search-btn:hover{background:var(--blue-dark)}
 .search-results{margin-top:1rem;display:none}
 .results-label{font-size:12px;color:var(--text2);margin-bottom:10px;padding-bottom:8px;border-bottom:0.5px solid var(--border)}
-
-/* TABS */
 .tabs-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-xl);margin-bottom:1rem;overflow:hidden}
 .tab-bar{display:flex;border-bottom:0.5px solid var(--border);padding:0 1rem}
 .tab-btn{padding:12px 16px;font-size:13px;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;color:var(--text2);display:flex;align-items:center;gap:7px;margin-bottom:-0.5px;transition:color 0.15s;background:none;border-top:none;border-left:none;border-right:none}
 .tab-btn.active{color:var(--blue);border-bottom-color:var(--blue)}
 .tab-btn:hover:not(.active){color:var(--text)}
 .tab-content{padding:1.25rem 1.5rem}
-
-/* CATEGORY GRID */
 .section-label{font-size:12px;font-weight:500;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
 .cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:1.5rem}
 .cat-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:14px 12px;cursor:pointer;transition:all 0.15s;text-align:left}
@@ -63,8 +54,6 @@ a{color:var(--blue);text-decoration:none}
 .cat-icon{font-size:20px;color:var(--blue);margin-bottom:7px}
 .cat-name{font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px}
 .cat-count{font-size:11px;color:var(--text3)}
-
-/* SITUATION CARDS */
 .sit-list{display:flex;flex-direction:column;gap:8px}
 .sit-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:14px 16px;cursor:pointer;transition:all 0.15s}
 .sit-card:hover{border-color:var(--blue-mid);background:var(--blue-light);transform:translateY(-1px);box-shadow:var(--shadow)}
@@ -78,9 +67,8 @@ a{color:var(--blue);text-decoration:none}
 .b-compliance{background:var(--blue-light);color:var(--blue)}
 .b-financial{background:var(--amber-light);color:var(--amber)}
 .b-quality{background:var(--green-light);color:var(--green)}
+.b-safety{background:#FDE8E8;color:#8B1A1A}
 .sit-preview{font-size:12px;color:var(--text2);line-height:1.5}
-
-/* DETAIL VIEW */
 .detail-view{display:none}
 .back-row{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem}
 .back-btn{background:none;border:0.5px solid var(--border2);border-radius:var(--radius);padding:6px 14px;font-size:12px;cursor:pointer;color:var(--text2);display:flex;align-items:center;gap:5px;transition:all 0.15s}
@@ -103,8 +91,9 @@ a{color:var(--blue);text-decoration:none}
 .meridian-label{font-size:12px;font-weight:600;color:var(--blue);margin-bottom:7px;display:flex;align-items:center;gap:6px;letter-spacing:0.04em}
 .meridian-label i{font-size:16px}
 .meridian-body{font-size:13px;color:var(--text);line-height:1.7}
-
-/* PROCESS CARDS */
+.insight-quote{background:var(--amber-light);border-radius:var(--radius);padding:10px 14px;font-size:13px;color:var(--amber);font-style:italic;margin-bottom:10px;display:flex;gap:8px;align-items:flex-start}
+.insight-quote i{flex-shrink:0;margin-top:2px}
+.closing-line{text-align:center;font-size:12px;color:var(--text3);font-style:italic;padding:10px 0 2px;border-top:0.5px solid var(--border);margin-top:6px}
 .proc-list{display:flex;flex-direction:column;gap:8px}
 .proc-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:14px 16px;cursor:pointer;display:flex;align-items:center;gap:14px;transition:all 0.15s}
 .proc-card:hover{border-color:var(--blue-mid);background:var(--blue-light);transform:translateY(-1px);box-shadow:var(--shadow)}
@@ -119,8 +108,6 @@ a{color:var(--blue);text-decoration:none}
 .proc-name{font-size:14px;font-weight:500;color:var(--text);margin-bottom:2px}
 .proc-desc{font-size:12px;color:var(--text2)}
 .proc-arrow{font-size:16px;color:var(--text3)}
-
-/* STEPS */
 .step-item{display:flex;gap:12px;margin-bottom:4px}
 .step-num{width:28px;height:28px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;margin-top:2px}
 .step-body{flex:1;padding-bottom:16px;border-bottom:0.5px solid var(--border);margin-bottom:4px}
@@ -129,28 +116,18 @@ a{color:var(--blue);text-decoration:none}
 .step-detail{font-size:13px;color:var(--text2);line-height:1.6}
 .step-tip{background:var(--amber-light);border-radius:var(--radius);padding:8px 12px;font-size:12px;color:var(--amber);margin-top:7px;display:flex;gap:6px;align-items:flex-start;line-height:1.5}
 .step-tip i{flex-shrink:0;margin-top:1px;font-size:13px}
-code{background:var(--bg2);border:0.5px solid var(--border2);border-radius:4px;padding:1px 6px;font-family:monospace;font-size:12px;color:var(--text)}
-
-/* EMPTY STATE */
 .empty{text-align:center;padding:3rem 1rem;color:var(--text3)}
 .empty i{font-size:40px;margin-bottom:12px;display:block;color:var(--border2)}
 .empty p{font-size:13px;line-height:1.7}
-
-/* FOOTER */
 .footer-bar{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-xl);padding:1rem 1.5rem;margin-top:1rem;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .footer-text{font-size:12px;color:var(--text2);display:flex;align-items:center;gap:6px}
 .submit-btn{font-size:12px;font-weight:500;padding:7px 16px;border:0.5px solid var(--blue);color:var(--blue);background:none;border-radius:var(--radius-lg);cursor:pointer;display:flex;align-items:center;gap:5px;transition:all 0.15s}
 .submit-btn:hover{background:var(--blue-light)}
-
-/* VERSION TAG */
 .version-tag{font-size:11px;color:var(--text3);text-align:center;padding:0.75rem;margin-top:0.5rem}
 </style>
 </head>
 <body>
-
 <div class="app-wrapper">
-
-  <!-- HEADER -->
   <div class="header">
     <div class="logo-mark"><i class="ti ti-compass"></i></div>
     <div class="logo-text">
@@ -159,26 +136,20 @@ code{background:var(--bg2);border:0.5px solid var(--border2);border-radius:4px;p
     </div>
     <div class="logo-tag">Your reference point for every leadership challenge</div>
   </div>
-
-  <!-- SEARCH -->
   <div class="search-card">
     <div class="search-label"><i class="ti ti-search" style="font-size:14px"></i> What do you need help with right now?</div>
     <div class="search-row">
-      <input class="search-input" id="mainSearch" type="text" placeholder="e.g. staff conflict, Strata report, new position request, termination offboarding..." />
+      <input class="search-input" id="mainSearch" type="text" placeholder="e.g. staff conflict, QC documentation, Strata report, specimen mislabeling, credential lapse..." />
       <button class="search-btn" onclick="handleSearch()"><i class="ti ti-search"></i> Find guidance</button>
     </div>
     <div class="search-results" id="searchResults"></div>
   </div>
-
-  <!-- MAIN TABS -->
   <div class="tabs-card">
     <div class="tab-bar">
       <button class="tab-btn active" id="tab-sit" onclick="switchTab('sit')"><i class="ti ti-users"></i> Leadership situations</button>
       <button class="tab-btn" id="tab-proc" onclick="switchTab('proc')"><i class="ti ti-list-check"></i> Process guides</button>
       <button class="tab-btn" id="tab-about" onclick="switchTab('about')"><i class="ti ti-info-circle"></i> About MERIDIAN</button>
     </div>
-
-    <!-- SITUATIONS TAB -->
     <div class="tab-content" id="content-sit">
       <div id="sit-list-view">
         <div class="section-label"><i class="ti ti-layout-grid" style="font-size:13px"></i> Browse by category</div>
@@ -194,8 +165,6 @@ code{background:var(--bg2);border:0.5px solid var(--border2);border-radius:4px;p
         <div id="sitDetailBody"></div>
       </div>
     </div>
-
-    <!-- PROCESSES TAB -->
     <div class="tab-content" id="content-proc" style="display:none">
       <div id="proc-list-view">
         <div class="section-label"><i class="ti ti-list-check" style="font-size:13px"></i> Step-by-step guides — click any process to open it</div>
@@ -209,14 +178,11 @@ code{background:var(--bg2);border:0.5px solid var(--border2);border-radius:4px;p
         <div id="procDetailBody"></div>
       </div>
     </div>
-
-    <!-- ABOUT TAB -->
     <div class="tab-content" id="content-about" style="display:none">
       <div style="max-width:600px">
         <div style="font-size:16px;font-weight:600;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:8px"><i class="ti ti-compass" style="color:var(--blue)"></i> What is MERIDIAN?</div>
         <p style="font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:1rem">MERIDIAN is a living laboratory leadership resource built from the real experiences of SRHS laboratory managers and supervisors. It exists because the best guidance for a leader in a difficult moment comes not from a policy manual, but from a colleague who has been there before.</p>
         <p style="font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:1.5rem">The name reflects the tool's purpose — a meridian is a fixed reference line that orients everything else on a map. When you're navigating something unfamiliar, MERIDIAN is your reference point.</p>
-
         <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:10px">Two tools in one</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.5rem">
           <div style="background:var(--blue-light);border-radius:var(--radius-lg);padding:14px">
@@ -228,30 +194,21 @@ code{background:var(--bg2);border:0.5px solid var(--border2);border-radius:4px;p
             <div style="font-size:12px;color:var(--teal);line-height:1.6">Step-by-step instructions for every operational task — Strata reports, Phenom requisitions, UKG transfers, invoice processing, and more.</div>
           </div>
         </div>
-
-        <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:10px">Part of the Lab Leadership Continuum</div>
-        <p style="font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:1.5rem">MERIDIAN is the interactive resource component of the Lab Leadership Continuum — a system-wide supervisor and manager development framework built for Spartanburg Regional Health System's four outlying laboratory campuses: Cherokee Medical Center, Mary Black Campus, Pelham Medical Center, and Union Medical Center.</p>
-
         <div style="background:var(--bg2);border-radius:var(--radius-lg);padding:14px 16px;font-size:12px;color:var(--text2);line-height:1.7">
           <strong style="color:var(--text)">Built by:</strong> Stephanie McCormick, Laboratory Manager, CMC &nbsp;·&nbsp; MHA Candidate, UAMS<br>
           <strong style="color:var(--text)">Preceptor:</strong> Brian Webb, System Director of Laboratory Services<br>
           <strong style="color:var(--text)">Project Champion:</strong> Rachael Shadduck, Director of Laboratory Services<br>
-          <strong style="color:var(--text)">Version:</strong> 1.0 Prototype &nbsp;·&nbsp; Summer 2026<br>
+          <strong style="color:var(--text)">Version:</strong> 1.1 &nbsp;·&nbsp; Summer 2026<br>
           <strong style="color:var(--text)">Hosted at:</strong> smccormick-lab.github.io/meridian
         </div>
       </div>
     </div>
-
   </div>
-
-  <!-- FOOTER -->
   <div class="footer-bar">
     <span class="footer-text"><i class="ti ti-bulb" style="font-size:14px"></i> Have a situation or process to contribute to MERIDIAN?</span>
     <button class="submit-btn" onclick="window.open('https://forms.cloud.microsoft/r/rqGg5yTpzm','_blank')"><i class="ti ti-plus"></i> Submit your experience</button>
   </div>
-
-  <div class="version-tag">MERIDIAN v1.0 · Lab Leadership Continuum · SRHS Laboratory Services · smccormick-lab.github.io/meridian</div>
-
+  <div class="version-tag">MERIDIAN v1.1 · Lab Leadership Continuum · SRHS Laboratory Services · smccormick-lab.github.io/meridian</div>
 </div>
 
 <script>
@@ -338,7 +295,147 @@ const situations = [
    better:"Two team members arrived without laptops — should have confirmed equipment a week out, not assumed.",
    lesson:"Inspection readiness is 80% preparation and 20% day-of management. If your prep is solid, the day manages itself.",
    rec:"Build your inspection team roster and assign sections at least 4 weeks out. Confirm equipment and access one week before. Never assume.",
-   insight:"The CAP inspection is also a leadership visibility moment — how the manager runs the day is noticed by everyone on the team and by medical staff. Calm, organized, and prepared is the standard to set."}
+   insight:"The CAP inspection is also a leadership visibility moment — how the manager runs the day is noticed by everyone on the team and by medical staff. Calm, organized, and prepared is the standard to set."},
+
+  {id:8,title:"Multiple breakdowns in a single shift",cat:"staffing",badge:"b-staffing",badgeLabel:"Staffing",
+   preview:"Multiple performance and professionalism issues surface in one shift — including patient redirection, emergency protocol failure, and a conversation in front of a patient.",
+   desc:"During a single shift, a phlebotomist redirected an assigned emergency patient draw to ED staff rather than completing it herself. During a fire alarm, she failed to take a fire extinguisher to the designated area, directing the outpatient phlebotomist instead. Later, when an outpatient arrived at the lab window, she had a conversation in front of the patient about who was responsible for the draw — a direct violation of patient-centered communication standards. Each issue was addressed in real time.",
+   who:"Phlebotomist, outpatient phlebotomist, lab manager, supervisor",
+   actions:"Each issue was addressed immediately, in real time, without waiting for a formal meeting. Specific behavior was named each time. The patient's needs were ultimately met. Documentation was completed separately for each incident.",
+   outcome:"All three issues were addressed in the shift. Patient needs were met. Documentation captured the pattern for future reference.",
+   well:"Addressing each issue immediately without waiting. Naming the specific behavior each time made expectations clear.",
+   better:"When multiple concerns surface in one shift, ask earlier: is this a knowledge gap, a motivation gap, or something else? That answer changes everything about your approach.",
+   lesson:"Prior education does not equal retained understanding. Validate it. And once a staff conversation happens in front of a patient, that one stops immediately — every time, no exceptions.",
+   rec:"When multiple concerns surface in one shift, document each one separately. Patterns become your evidence later. Address the patient-facing issue first — that is always the highest-stakes moment.",
+   insight:"Real-time coaching is harder than a scheduled meeting, and more effective. Don't wait for a formal setting when the behavior is happening right now.",
+   quote:"Real-time coaching is harder than a scheduled meeting, and more effective.",
+   closing:"You addressed it. That's what good leaders do."},
+
+  {id:9,title:"Incomplete API survey — accountability and compliance",cat:"compliance",badge:"b-compliance",badgeLabel:"Compliance",
+   preview:"A tech completes part of a required survey but skips a section and fails to sign the attestation sheet. Another staff member has to finish it.",
+   desc:"A medical laboratory technician completed the immunohematology portion of an API survey but did not complete the CRP section. The employee also did not sign the required attestation sheet confirming completion. As a result, another technician had to complete the remaining work to ensure submission before the deadline. This created additional workload for a colleague and posed a compliance risk.",
+   who:"Medical laboratory technician (primary), medical laboratory technician (peer who completed remaining work), lab manager",
+   actions:"The employee was addressed regarding incomplete survey requirements and the expectation to fully complete assigned responsibilities, including all sections and required attestations. Expectations were reinforced around accountability, timeliness, and the regulatory importance of complete documentation.",
+   outcome:"Survey was completed on time due to intervention. Expectations were clearly communicated to prevent recurrence.",
+   well:"The issue was identified before the submission deadline. Team collaboration ensured completion. Regulatory compliance was maintained.",
+   better:"Earlier verification of completion could have prevented last-minute intervention. Checkpoints or reminders may have improved compliance.",
+   lesson:"Leaders must ensure that accountability for required documentation is clearly defined and verified. Even partial completion can create compliance risk if not addressed before deadlines.",
+   rec:"Set clear expectations for full completion, including all sections and required signatures. Implement checkpoints prior to deadlines. When counseling the employee, be specific — name the section that was missing, name the attestation. 'The form looked done from the outside' is not an excuse.",
+   insight:"Catching it before submission was the win. Now build the system that prevents the catch from being necessary. A shared tracker or sign-off checklist for high-stakes regulatory items goes a long way.",
+   quote:"Expectations without accountability are just suggestions. Build the follow-through in.",
+   closing:"Catching it before submission was the win. Now build the system that prevents the catch from being necessary."},
+
+  {id:10,title:"Specimen mislabeling — patient safety event",cat:"safety",badge:"b-safety",badgeLabel:"Patient Safety",
+   preview:"A phlebotomist pre-prints labels without verifying the patient. Two patients share the same last name. Four tubes are mislabeled. A tech catches it before results are released.",
+   desc:"A phlebotomist pre-printed labels for a patient named 'Brown' from the handheld device without verifying the correct patient. In the ICU, a nurse drew the specimen and handed it to the phlebotomist, who labeled four tubes without checking the patient's ID bracelet. Two patients shared the same last name, so two tubes were labeled for each incorrectly. A lab technician caught the discrepancy through results review before anything was released. The correct patient was redrawn. A near-miss was caught because someone was paying attention downstream.",
+   who:"Phlebotomist, ICU nurse, laboratory technician, supervisor/manager, two patients with similar identifiers",
+   actions:"The discrepancy was immediately investigated once identified, and results were withheld to prevent incorrect reporting. The phlebotomist was instructed to redraw the correct patient. The employee was counseled on proper patient identification procedures, including the requirement to verify identity using the ID bracelet and to use the handheld scanning function rather than pre-printing labels. Education was provided on the purpose of the handheld system as a safeguard.",
+   outcome:"Error identified prior to result release. Correct specimen collected. Patient safety risk mitigated. Education provided.",
+   well:"The lab technician's review process caught the error before results were released. Immediate investigation prevented incorrect data from reaching the care team.",
+   better:"Adherence to patient identification procedures would have prevented the event entirely. Additional emphasis on consequences of pre-analytical errors may have reinforced compliance sooner.",
+   lesson:"Workarounds always carry risk. Pre-printing labels is a shortcut that bypasses the one safeguard designed to catch this exact error. The handheld system exists for a reason — use it as designed, every time.",
+   rec:"This type of event requires both a coaching conversation and documentation. Don't treat it as minor just because the error was caught in time. Review the full sequence with the employee: where did the protocol break down? If a nurse handed off a specimen without verifying identity, that's a cross-disciplinary gap worth flagging — not to assign blame, but because the system risk involves both teams.",
+   insight:"When an error is caught, investigate the full sequence — not just the last step. Here, multiple people in the chain skipped verification. Address the pattern, not just the endpoint. Reinforce to your team: 'We scan because two patients can have the same last name.' Make the reason real, not just the rule.",
+   quote:"Clarity is kindness. In patient identification, it is also safety.",
+   closing:"The system worked because someone downstream was paying attention. Your job is to make sure the first line of defense holds next time."},
+
+  {id:11,title:"Missed maintenance logs and QC documentation",cat:"compliance",badge:"b-compliance",badgeLabel:"Compliance",
+   preview:"A tech misses maintenance logs across multiple instruments and dates — spanning both shifts. A pattern, not a one-time oversight.",
+   desc:"A medical laboratory technician failed to complete maintenance logs for the DxH 800, DxH 520, and Cepheid instruments across multiple dates, and also missed required QC review documentation for the DxH 800 and DxH 520. These were not isolated misses — they spanned both first and second shift responsibilities. The employee was counseled and given practical guidance, including a recommendation to use a personal checklist for shift-based responsibilities.",
+   who:"Medical laboratory technician, supervisor/manager",
+   actions:"The employee was counseled regarding incomplete documentation and the expectation to complete all assigned departmental duties across both shifts. Guidance was provided on improving organization and accountability, including the recommendation to create and maintain a checklist of required tasks such as temperature logs, maintenance logs, and QC documentation.",
+   outcome:"Documentation gaps were identified and addressed. Expectations were reinforced for all required logs and QC reviews going forward.",
+   well:"Gaps were identified and addressed with coaching that offered a real tool — the checklist approach — rather than just a reprimand.",
+   better:"Routine monitoring or audits could have identified missing documentation sooner. Additional mid-month follow-up may have reduced the number of incomplete items.",
+   lesson:"Missing documentation is not invisible — it shows up in audits, inspections, and investigations. Leaders need to monitor compliance before month-end, not after.",
+   rec:"When you see documentation gaps across multiple dates and instruments, that is a pattern, not a one-time oversight. Address it that way. Practical tools help — recommending a checklist is not coddling, it is meeting the employee where they are. Follow up within two weeks. If the same employee misses documentation again after counseling, escalate. First conversation is coaching. Second is a warning. Track both.",
+   insight:"Consider a brief, informal spot-check of logs midmonth. Catching a gap early is a coaching moment. Catching it at month-end or during an inspection is a different conversation entirely.",
+   quote:"A process followed consistently is a gift to your future self — and a protection for your whole team.",
+   closing:"Expectations without accountability are just suggestions. Build the follow-through in."},
+
+  {id:12,title:"Lapsed certification — compliance and staffing tension",cat:"compliance",badge:"b-compliance",badgeLabel:"Compliance",
+   preview:"A tech's required certification expires mid-year. The lapse is discovered after the fact. Staffing constraints complicate the response.",
+   desc:"A medical laboratory technician's required certification expired mid-year. The lapse was discovered after the expiration date, at which point policy required suspension pending renewal. Due to immediate staffing constraints, the employee was not suspended but received a formal written disciplinary action. Expectations were reinforced: maintaining credentials is the employee's individual responsibility, and future non-compliance would result in progressive discipline up to termination.",
+   who:"Medical laboratory technician, lab manager, HR business partner",
+   actions:"The issue was formally documented. A written disciplinary action was issued in alignment with policy. Policy expectations were clearly communicated. The balance between compliance and operational need was made explicit, not hidden.",
+   outcome:"Issue formally addressed. Employee returned to compliance with credential renewal. Documentation in place for any future recurrence.",
+   well:"The issue was formally documented. Policy expectations were clearly communicated. The balance between compliance and operational need was made explicit.",
+   better:"A proactive credential tracking system would have caught the expiration before it occurred. The leader also should have consulted HR and the director before deciding to keep the employee working while out of compliance.",
+   lesson:"Credential tracking is a leadership responsibility too — not just the employee's. Even when intent isn't malicious, a lapse creates real regulatory risk. And when you make an operational exception to policy, document the rationale clearly. That decision needs to be defensible.",
+   rec:"Build a credential tracking system before you need it. A simple spreadsheet with expiration dates and 90-day reminders is enough to prevent most lapses. Consult HR and your director before deciding to keep an employee working while out of compliance — that decision needs to be made at the right level. When you issue the disciplinary action, be clear: 'This is required by policy, not optional.' After this, send a reminder to your whole team about certification renewal timelines. Use it as a no-names educational moment.",
+   insight:"Don't let staffing pressure become a reason to avoid compliance conversations. It's tempting. But one inspection-level finding costs far more than a short staffing gap.",
+   quote:"The best leaders ask better questions — like asking what the tracking system looks like for certification renewals.",
+   closing:"Compliance requires both the employee's ownership and the leader's system. Build yours now."},
+
+  {id:13,title:"Unauthorized testing of employees",cat:"compliance",badge:"b-compliance",badgeLabel:"Compliance",
+   preview:"A tech gives a coworker a pregnancy test kit for self-testing. Another runs a UA on an ED employee without an order. No registration. No documentation.",
+   desc:"A laboratory technician gave an ED employee a pregnancy test kit for self-testing rather than directing her through proper registration and ordering. A request for a Beta hCG quantitative test was accepted but not performed. A urinalysis was performed on a second ED employee without a provider order and without registration in the EMR. All three actions bypassed established protocols for ordering, patient registration, and documentation. A formal written disciplinary action was issued.",
+   who:"Laboratory technician, ED employees (2), lab manager, HR",
+   actions:"The behavior was identified and formally addressed. A written disciplinary action was issued in alignment with policy. Expectations were clearly documented, and consequences for future violations were explicitly communicated. The scope was investigated to determine if other instances had occurred.",
+   outcome:"Disciplinary action issued. Expectations reset. Monitoring established for recurrence.",
+   well:"The behavior was identified and formally addressed. Expectations were clearly documented with explicit consequences for future violations.",
+   better:"Investigating earlier whether this was habitual rather than isolated. Informal testing cultures can run deep in a team.",
+   lesson:"Good intentions do not protect the organization from compliance violations. Testing without an order, without registration, and without documentation — any one of these can trigger regulatory findings. All three together require formal action.",
+   rec:"When you discover unauthorized testing, first understand the full scope — were there other instances or other employees involved? Issue the disciplinary action in alignment with policy. Don't soften it because the intent was helpful — the compliance risk is the same either way. Reinforce clearly: all testing requires a valid provider order, a registered patient, and documentation in the system. There are no exceptions for coworkers. After this, consider a brief team education moment — no names — about why these protocols exist.",
+   insight:"Informal testing practices tend to be habitual. Ask yourself whether this is the first time, or the first time it was caught.",
+   quote:"Every workaround is a risk that hasn't materialized yet.",
+   closing:"You stopped it. Now make sure the expectation is clear enough that it doesn't need to be stopped again."},
+
+  {id:14,title:"Workplace violence — staff-on-staff physical incident",cat:"hr",badge:"b-hr",badgeLabel:"Employee relations",
+   preview:"A physical altercation occurs between two staff members. Zero-tolerance policy applies. The manager must act immediately and correctly.",
+   desc:"A physical altercation occurred between two laboratory staff members during a shift. The organization has a zero-tolerance workplace violence policy. The manager was required to respond immediately, involve security and HR, and initiate the formal process — regardless of the circumstances that led to the incident.",
+   who:"Two laboratory staff members, lab manager, HR business partner, security, department director",
+   actions:"Security was contacted immediately. Both employees were separated and removed from the work area. HR was notified the same day. The manager documented the incident in real time with timestamps. Both employees were placed on administrative leave pending investigation. HR led the investigation. The manager participated as a fact witness, not as the decision-maker on outcome.",
+   outcome:"Formal HR investigation completed. Disciplinary action issued per policy. Workplace violence policy was reinforced with the broader team.",
+   well:"Immediate separation of the involved employees. Same-day security and HR notification. Real-time documentation. Not attempting to mediate or resolve it independently.",
+   better:"The manager attempted briefly to understand 'what happened' before involving security — that step should be skipped entirely. Security first, questions later.",
+   lesson:"Workplace violence is not a gray area. Your job in the moment is not to investigate or mediate — it is to separate, secure, and report. The investigation belongs to HR.",
+   rec:"If you witness or are notified of a physical altercation, your sequence is: separate the individuals, contact security, notify HR, document in real time. Do not attempt to determine fault before taking those steps. Do not allow either employee to remain in the work area. After the investigation, address the broader team without naming individuals — acknowledge that an incident occurred and that the zero-tolerance policy was applied.",
+   insight:"How you respond in the first five minutes of a workplace violence incident is what your team will remember. Calm, fast, and by-the-book is the standard.",
+   quote:"In high-stakes moments, process is your protection.",
+   closing:"You kept your team safe. That is always the first job."},
+
+  {id:15,title:"Employee unable to perform an essential job function",cat:"hr",badge:"b-hr",badgeLabel:"Employee relations",
+   preview:"During a formal meeting, an employee states they cannot perform specimen collection — an essential function of their role. A timeline and a decision must be set.",
+   desc:"During a formal meeting, a medical laboratory scientist stated they would not be able to perform specimen collection, an essential job function of the Med Tech II role, even on a limited basis. The employee was given a 60-day transition period to identify and apply for an alternative role within the organization that aligned with their capabilities. Expectations were clearly communicated: the employee was responsible for actively applying, and failure to transfer to another position by the deadline would result in separation.",
+   who:"Medical laboratory scientist, lab manager, HR business partner, department director",
+   actions:"HR was involved immediately. A structured timeline with clear expectations was communicated. The employee was given a real opportunity to find an alternative role within the organization. Leadership supported that process without removing accountability. Expectations and the timeline were documented in writing immediately after the meeting.",
+   outcome:"Employee was given a structured opportunity to transfer. Timeline and expectations were clear and documented. Leadership followed through on stated consequences.",
+   well:"A structured timeline with clear expectations was provided from the start. HR was engaged. The employee was given a real opportunity. Leadership supported the process without removing accountability.",
+   better:"Set structured check-in points during the transition period. A 60-day window without milestones is just a countdown.",
+   lesson:"When an employee can't perform an essential function, you have to be honest about what that means — for them and for the team. Providing options is good leadership. Removing accountability while providing options is not.",
+   rec:"Before this meeting happens, involve HR — this situation has legal dimensions that require their guidance. Don't navigate it alone. Be clear, factual, and compassionate. This is not about the person failing — it is about a job requirement that cannot be met. Keep that framing throughout. Communicate the timeline in writing immediately after the meeting. Set mid-point check-ins: at 30 days, where is the employee in their job search?",
+   insight:"Clarity is kindness, even in the hardest conversations. Ambiguity about the timeline or the consequences is not compassion — it is a setup for a harder conversation later.",
+   quote:"Clarity is kindness, even in the hardest conversations.",
+   closing:"You gave a real opportunity and held the line. That is what good leadership looks like."},
+
+  {id:16,title:"Pediatric blood draw complaint — technique and professionalism",cat:"ops",badge:"b-ops",badgeLabel:"Operations",
+   preview:"A family complains about a phlebotomist's technique and attitude during a pediatric draw attempt. The complaint arrives through patient experience channels.",
+   desc:"A family filed a complaint about a phlebotomist's technique and demeanor during a blood draw attempt on a pediatric patient. The complaint described multiple unsuccessful attempts, visible impatience, and eye-rolling in front of the family. The complaint was routed through the patient experience department before reaching the lab manager.",
+   who:"Phlebotomist, pediatric patient and family, lab manager, patient experience department",
+   actions:"The manager reviewed the patient experience report and the sequence of events before speaking with the employee. Two separate coaching conversations were held — one addressing the technique concern (a skill gap) and one addressing the professionalism concern (a conduct issue). Documentation was completed. Competency validation for pediatric draws was reviewed. A clear standard was established for when a collection attempt should be discontinued and another staff member called.",
+   outcome:"Both concerns addressed with the employee separately. Documentation in file. Pediatric competency standard established for the team.",
+   well:"Reviewing the full sequence before the conversation. Addressing technique and professionalism as separate issues with different coaching approaches.",
+   better:"A clear standard for when to stop a pediatric attempt and call for assistance should have existed before this complaint required it to be stated.",
+   lesson:"Patient complaints are data. One complaint about impatience may be isolated. Two is a trend. Take family complaints about technique and professionalism seriously even when they come through patient experience channels rather than directly to you.",
+   rec:"Address the technique concern and the professionalism concern as separate issues — they have different coaching approaches. Technique is a skill gap. Eye-rolling in front of a family is a conduct issue. If the employee minimizes the complaint, stay factual: 'Here's what was reported. Here's what I need to see differently.' Don't debate the family's experience. Patient-facing roles carry a higher accountability standard for demeanor.",
+   insight:"Patient experience and patient safety are not separate concerns. A pediatric draw with multiple failed attempts and visible impatience is both a safety moment and an experience moment.",
+   quote:"The best leaders ask better questions — starting with: at what point should a different decision have been made?",
+   closing:"Patient experience and patient safety are not separate concerns. This situation was both."},
+
+  {id:17,title:"Repeated blood bank non-compliance — termination",cat:"hr",badge:"b-hr",badgeLabel:"Employee relations",
+   preview:"A blood bank tech has an extended history of QC and documentation failures. Progressive discipline is applied consistently. An emergency blood release event with incomplete verification steps leads to termination.",
+   desc:"A laboratory technician in blood bank had an extended history of non-compliance with QC, documentation, and verification requirements. The employee initialed QC as complete on one occasion despite not performing the review. Previous verbal warnings had been issued for similar gaps. Despite a formal Performance Improvement Plan, a suspension, and ongoing monitoring, additional process failures continued. During a later emergency blood release event, required verification steps were not completed prior to release — creating a direct patient safety risk. The employee was terminated.",
+   who:"Laboratory technician, lab manager, HR business partner, medical director, department director",
+   actions:"Progressive discipline was applied at each stage: verbal warning, written warning, formal PIP with measurable and time-bound expectations, suspension, and continued monitoring. HR was involved at each escalation point. Each step was documented in real time. When the emergency blood release event occurred with missing verification, the decision to terminate was made in consultation with HR, the medical director, and the director.",
+   outcome:"Employee was terminated following a clear, well-documented record of non-compliance and a final patient safety event. Progressive discipline was applied consistently throughout.",
+   well:"Progressive discipline was applied consistently and documented thoroughly. Multiple opportunities for improvement were provided. The final decision was grounded in a clear record.",
+   better:"When a PIP is active, increase monitoring touchpoints. The monitoring period is not a quiet zone — it is when you need the most visibility into the work.",
+   lesson:"In blood bank, 'close enough' is never close enough. When an employee cannot or will not sustain compliance in a high-risk clinical area, the decision to terminate — though difficult — is how you protect patients. Documentation of that process is what makes the decision defensible.",
+   rec:"Document every step of progressive discipline in real time. By the time termination is warranted, you need a clear and consistent record — notes from memory weeks later are not the same as same-day documentation. Involve HR at each escalation point. A PIP should have measurable, time-bound expectations: 'Complete blood bank QC daily by 0800 and initial the log before any patient work begins, with supervisor verification weekly' is a PIP. 'Do better with QC' is not. When you reach the termination decision, you will second-guess yourself. Review your documentation. If you followed progressive discipline consistently, provided real opportunity for improvement, and the safety risk remained — you made the right call.",
+   insight:"Documentation integrity violations — initialing something as done when it wasn't — are not forgetfulness issues. They are trust issues. Treat them with heightened seriousness from the first occurrence.",
+   quote:"Patient safety is not a competing priority. It is the priority.",
+   closing:"This is one of the hardest decisions in leadership. You followed the process, gave every opportunity, and protected your patients. That is the job."}
 ];
 
 const categories = [
@@ -348,107 +445,90 @@ const categories = [
   {id:"hr",name:"Employee relations",icon:"ti-heart-handshake",count:situations.filter(s=>s.cat==="hr").length},
   {id:"ops",name:"Operations",icon:"ti-settings",count:situations.filter(s=>s.cat==="ops").length},
   {id:"compliance",name:"Compliance",icon:"ti-shield-check",count:situations.filter(s=>s.cat==="compliance").length},
-  {id:"financial",name:"Financial",icon:"ti-coin",count:situations.filter(s=>s.cat==="financial").length},
-  {id:"quality",name:"Quality",icon:"ti-award",count:situations.filter(s=>s.cat==="quality").length}
+  {id:"safety",name:"Patient Safety",icon:"ti-heart-rate-monitor",count:situations.filter(s=>s.cat==="safety").length},
+  {id:"financial",name:"Financial",icon:"ti-coin",count:situations.filter(s=>s.cat==="financial").length}
 ];
 
 const processes = [
-  {id:1,title:"Pull a Strata productivity report",icon:"ti-chart-bar",iconClass:"pi-blue",
-   desc:"Six-period trend with variance — for FTE and productivity reporting",
-   steps:[
-     {t:"Open Strata",d:"Log in to Strata. Navigate to Performance → Productivity Reporting.",tip:""},
-     {t:"Select your department",d:"Use the department filter to select your specific lab cost center. Confirm the department code matches your location.",tip:""},
-     {t:"Click Reports in the top right corner",d:"Look for the Reports dropdown in the upper right of the screen.",tip:""},
-     {t:"Select the correct report",d:"Choose 'Productivity Six-Period Trend-Breakout with Variance UPDATED' from the report list.",tip:""},
-     {t:"Run the report",d:"Click Run Report. The report downloads automatically in Excel format.",tip:""},
-     {t:"Open and enter data",d:"Open the downloaded file. Enter: Actual Worked FTEs (Current Period, Reporting Period, Fiscal YTD), Total Target Worked FTEs, FTE Variance fields, Education/Orientation Hours, and Overtime Hours.",tip:""},
-     {t:"Save your file",d:"Save to the Shared Drive under Company_Inv_PO following your site's folder naming convention.",tip:"Save immediately after completing — don't leave it in your Downloads folder."}
-   ]},
-  {id:2,title:"Submit a new position request in Phenom",icon:"ti-user-plus",iconClass:"pi-teal",
-   desc:"Post a PRN or full-time lab position through the Phenom requisition system",
-   steps:[
-     {t:"Open Phenom",d:"Navigate to Phenom from the Hub: Applications → Phenom Requisition Center.",tip:""},
-     {t:"Click Create and select the correct template",d:"Click the Create button (top right). Select the requisition template matching the position type. Search by position name or job code if needed.",tip:""},
-     {t:"Enter the job code and department code",d:"PRN: job code 0126 (Phlebotomy) or 1161 (hybrid Tech). Full-time Tech: job code 2740150. Department code for full-time Tech positions: 2740180.",tip:"Double-check the job code before submitting — wrong codes delay posting."},
-     {t:"Set Job Category",d:"Select Allied Health Careers for tech positions, or Clinical Support for phlebotomy. Confirm all red asterisk required fields are completed.",tip:""},
-     {t:"Set up the Hiring Team",d:"Your name defaults as Hiring Manager. Add the recruiter's name in the Recruiter field.",tip:""},
-     {t:"Set the approval chain",d:"PRN: one approver (the recruiter). Full-time: three approvers in sequence. For full-time positions, also email Brian Webb — he is on the Labor Management Committee (LMC) and needs to be aware.",tip:"Full-time positions will not post until all three approvers clear it — submit early."},
-     {t:"Submit and monitor",d:"PRN positions post as soon as the recruiter approves. Full-time positions must clear all three approvers. Monitor status in your Phenom dashboard.",tip:""}
-   ]},
-  {id:3,title:"Process a vendor invoice through RQC",icon:"ti-receipt",iconClass:"pi-amber",
-   desc:"Submit Lab Corp, Cintas, Evoqua, or Eagle Express invoices through the Intra Requisition system",
-   steps:[
-     {t:"Open RQC from the Hub",d:"Hub → Applications → Intra Requisition Center (RQC). Sign in with your SRHS credentials.",tip:""},
-     {t:"Start a new requisition — Detail Profile tab",d:"Enter Cost Default Vendor (look up vendor name or number). Select PO Code: BILL. Enter your title (CMC Lab) and your name and email.",tip:""},
-     {t:"Complete the Special/Service Tab",d:"Item: enter a unique invoice number. Description: invoice number and date. UOM: $. Cost: invoice amount. Account: use the list for the correct account code.",tip:""},
-     {t:"Add Comments",d:"Click Comments tab → select 'Comments to Print on Requisition.' Add Title (CMC Lab), your name, and your SRHS email.",tip:""},
-     {t:"Invoices over $5,000",d:"Must be approved by the director before submission. Route to Rachael Shadduck for approval first — do not submit until approved.",tip:""},
-     {t:"Print or save the requisition",d:"Save as PDF. For CMC, save to Shared Drive → Company_Inv_PO → correct company folder (CMC has folders for each company).",tip:""},
-     {t:"Email AP and attach the invoice",d:"Open invoice in Adobe. Right-click → Fill and Sign → add PO number. Email to AP Invoice and attach the invoice file.",tip:"Wait on email that will have the PO number — open invoice in Adobe, fill in PO number, then send."}
-   ]},
-  {id:4,title:"Add or remove someone from a lab email group",icon:"ti-mail",iconClass:"pi-purple",
-   desc:"Manage distribution group membership in Exchange Admin Center",
-   steps:[
-     {t:"Open Exchange Admin Center",d:"From your browser, navigate to the Exchange Admin Center. Go to Recipients → Groups.",tip:""},
-     {t:"Search for the CMC Lab groups",d:"Type CMC in the search bar. Three lab groups appear: _CMC Lab (main group), _CMC Lab Phleb, _CMC Lab Techs.",tip:""},
-     {t:"Select the correct group and click Edit",d:"Select the appropriate group. Click the Pencil/Edit icon. Navigate to the Membership section.",tip:"Everyone goes into the main _CMC Lab group. Phlebotomists also go into _CMC Lab Phleb. Techs also go into _CMC Lab Techs."},
-     {t:"Add or remove",d:"Click + to add or – to remove. A Select Members dialog appears. Type the staff member's name in the search field.",tip:""},
-     {t:"Select the name and confirm",d:"Click the correct name from search results. Click Add at the bottom. Confirm the name appears in the members list.",tip:""},
-     {t:"Save",d:"Click OK to confirm, then Save. Changes take effect immediately.",tip:""},
-     {t:"Verify",d:"Send a test message to the group address to confirm the change worked correctly.",tip:"This step takes 30 seconds and prevents a lot of 'why am I not getting emails' calls later."}
-   ]},
-  {id:5,title:"UKG transfer — move an employee between cost centers",icon:"ti-arrows-transfer-up",iconClass:"pi-teal",
-   desc:"Transfer an employee's UKG profile to a new department or cost center",
-   steps:[
-     {t:"Confirm all transfer details in writing",d:"Verify the employee name, current cost center, destination cost center, and effective date before starting. Get written confirmation from both managers if cross-department.",tip:""},
-     {t:"Log in to UKG Workforce Central",d:"Open UKG from the Hub. Navigate to Administration → Employee Management.",tip:""},
-     {t:"Find the employee",d:"Search by name or employee ID. Verify you have the correct record — confirm hire date and current assignment before proceeding.",tip:""},
-     {t:"Initiate the transfer",d:"Select Transfer from the employee action menu. Enter the destination cost center code and the effective date. Do not use a past date unless HR has authorized a retroactive transfer.",tip:""},
-     {t:"Update the job code if needed",d:"If the transfer involves a role change (PRN to FT, or different classification), update the job code at the same time. Notify payroll if the pay rate changes.",tip:""},
-     {t:"Submit for approval",d:"Route the transfer request through the approval chain. Your director will receive a notification. Confirm approval before the effective date.",tip:""},
-     {t:"Verify after the first payroll cycle",d:"Check the next payroll to confirm hours are charging to the correct cost center. This is the most common error point — always verify.",tip:"This step is skipped most often and causes the most problems. Set a calendar reminder for payroll day."}
-   ]},
-  {id:6,title:"Monthly Soft Reports — Transfusion Committee",icon:"ti-droplet",iconClass:"pi-blue",
-   desc:"Generate and distribute monthly Transfusion Committee soft reports — due by the 5th of each month",
-   steps:[
-     {t:"Log in to the Soft/Oracle system",d:"Access Soft from the clinical applications menu using your SRHS credentials. Navigate to the Transfusion module.",tip:""},
-     {t:"Set the report parameters",d:"Select the prior month date range (first to last day). Select your facility location. Choose the Transfusion Committee Summary report template.",tip:""},
-     {t:"Run and review",d:"Click Run/Generate. Review output for errors or outliers before distributing. Flag any unusual values for medical director review.",tip:""},
-     {t:"Export as PDF",d:"Name the file: [SiteName]_TransfusionCommittee_[MonthYear]. Example: CMC_TransfusionCommittee_May2026",tip:""},
-     {t:"Save to the shared drive",d:"Save to: Cherokee → QMP → Quality CMC → Transfusion Committee Reports → [Year]",tip:""},
-     {t:"Distribute to the committee",d:"Email the report to the Transfusion Committee distribution list. Include the month and any flagged items in the subject line. CC your medical director.",tip:""},
-     {t:"Document completion",d:"Note completion date in your monthly task tracker. These reports are due by the 5th of each month for the prior month's data.",tip:"Set a recurring calendar reminder for the 3rd of each month so you never miss the deadline."}
-   ]},
-  {id:7,title:"Traveler onboarding — 10-day checklist",icon:"ti-clipboard-check",iconClass:"pi-green",
-   desc:"Complete checklist for onboarding a travel tech — start 10 days before their first day",
-   steps:[
-     {t:"Day -10: Initiate Epic access request",d:"Submit Epic access request to IT with role-based permissions specific to the lab. Specify the start date and required modules.",tip:"This takes time to process — 10 days is not too early."},
-     {t:"Day -7: Contact badge office",d:"Request badge creation. Provide the traveler's name, start date, agency, and required access areas. Confirm pickup process.",tip:""},
-     {t:"Day -5: Create UKG profile",d:"Set up the UKG profile and assign to the correct cost center. Double-check the cost center code — this is the most common error.",tip:"Verify the cost center code with your finance contact before entering it."},
-     {t:"Day -5: Confirm email and system access",d:"Verify that email account creation is in progress. Confirm Compass and any other required application access has been requested.",tip:""},
-     {t:"Day -3: Send orientation materials",d:"Email the traveler the lab orientation packet, parking information, dress code, and first-day contact information.",tip:""},
-     {t:"Day -1: Confirm all access",d:"Call or email IT to confirm Epic access is active. Verify badge is ready. Confirm UKG assignment. Do not wait until day one to discover an access gap.",tip:"This 10-minute call prevents a 4-hour delay on day one."},
-     {t:"Day 1: Complete lab orientation",d:"Conduct lab-specific orientation. Review safety, emergency procedures, equipment, and workflow. Have the traveler sign the orientation checklist.",tip:""},
-     {t:"Set 30-day and 90-day check-ins",d:"Add calendar reminders for 30-day and 90-day milestone conversations with the traveler.",tip:""}
-   ]},
-  {id:8,title:"Termination — same-day IT offboarding steps",icon:"ti-user-x",iconClass:"pi-coral",
-   desc:"Remove all system access the same day as termination — step-by-step in order",
-   steps:[
-     {t:"Immediately after the termination meeting: notify IT",d:"Contact IT (Daniel Corley or the IT help desk) immediately. Do not wait until end of day. Provide the employee name, ID, and termination date.",tip:"Same-day offboarding only works if IT is notified within the hour."},
-     {t:"Collect badge and physical access items",d:"Collect the employee's badge, lab keys, and any other physical access items before they leave the building. HR typically handles this in the meeting — confirm it happened.",tip:""},
-     {t:"Confirm Epic deactivation",d:"Follow up with IT to confirm Epic access has been deactivated. Request email confirmation for your documentation.",tip:"Epic access left active after termination is an immediate HIPAA risk."},
-     {t:"Disable email account",d:"Notify email admin (or confirm IT is handling) to disable the employee's SRHS email account and set an out-of-office if needed.",tip:""},
-     {t:"Update UKG",d:"Update the employee's status in UKG to reflect the termination and effective date. Coordinate with payroll on the final pay period.",tip:""},
-     {t:"Change shared passwords",d:"Identify and change any shared passwords or access codes the employee had access to. Reference your role-specific access list for this role.",tip:"Maintain an updated shared access list for each role — this step is impossible without it."},
-     {t:"Document everything with timestamps",d:"Record each completed step with the time it was completed. This documentation supports the HR record and any future legal review.",tip:"Even a simple email to yourself documenting the steps and times is sufficient."}
-   ]}
+  {id:1,title:"Pull a Strata productivity report",icon:"ti-chart-bar",iconClass:"pi-blue",desc:"Six-period trend with variance — for FTE and productivity reporting",steps:[
+    {t:"Open Strata",d:"Log in to Strata. Navigate to Performance → Productivity Reporting.",tip:""},
+    {t:"Select your department",d:"Use the department filter to select your specific lab cost center. Confirm the department code matches your location.",tip:""},
+    {t:"Click Reports in the top right corner",d:"Look for the Reports dropdown in the upper right of the screen.",tip:""},
+    {t:"Select the correct report",d:"Choose 'Productivity Six-Period Trend-Breakout with Variance UPDATED' from the report list.",tip:""},
+    {t:"Run the report",d:"Click Run Report. The report downloads automatically in Excel format.",tip:""},
+    {t:"Open and enter data",d:"Enter: Actual Worked FTEs (Current Period, Reporting Period, Fiscal YTD), Total Target Worked FTEs, FTE Variance fields, Education/Orientation Hours, and Overtime Hours.",tip:""},
+    {t:"Save your file",d:"Save to the Shared Drive under Company_Inv_PO following your site's folder naming convention.",tip:"Save immediately — don't leave it in your Downloads folder."}
+  ]},
+  {id:2,title:"Submit a new position request in Phenom",icon:"ti-user-plus",iconClass:"pi-teal",desc:"Post a PRN or full-time lab position through the Phenom requisition system",steps:[
+    {t:"Open Phenom",d:"Navigate to Phenom from the Hub: Applications → Phenom Requisition Center.",tip:""},
+    {t:"Click Create and select the correct template",d:"Click the Create button (top right). Select the requisition template matching the position type.",tip:""},
+    {t:"Enter the job code and department code",d:"PRN: job code 0126 (Phlebotomy) or 1161 (hybrid Tech). Full-time Tech: job code 2740150. Department code for full-time Tech: 2740180.",tip:"Double-check the job code before submitting — wrong codes delay posting."},
+    {t:"Set Job Category",d:"Select Allied Health Careers for tech positions, or Clinical Support for phlebotomy. Confirm all required fields are completed.",tip:""},
+    {t:"Set up the Hiring Team",d:"Your name defaults as Hiring Manager. Add the recruiter's name in the Recruiter field.",tip:""},
+    {t:"Set the approval chain",d:"PRN: one approver (the recruiter). Full-time: three approvers in sequence. For full-time positions, also email Brian Webb — he is on the LMC and needs to be aware.",tip:"Full-time positions will not post until all three approvers clear it — submit early."},
+    {t:"Submit and monitor",d:"PRN positions post as soon as the recruiter approves. Monitor status in your Phenom dashboard.",tip:""}
+  ]},
+  {id:3,title:"Process a vendor invoice through RQC",icon:"ti-receipt",iconClass:"pi-amber",desc:"Submit Lab Corp, Cintas, Evoqua, or Eagle Express invoices through the Intra Requisition system",steps:[
+    {t:"Open RQC from the Hub",d:"Hub → Applications → Intra Requisition Center (RQC). Sign in with your SRHS credentials.",tip:""},
+    {t:"Detail Profile tab",d:"Enter Cost Default Vendor. Select PO Code: BILL. Enter your title (CMC Lab) and your name and email.",tip:""},
+    {t:"Special/Service Tab",d:"Item: unique invoice number. Description: invoice number and date. UOM: $. Cost: invoice amount. Account: use the list for the correct account code.",tip:""},
+    {t:"Add Comments",d:"Comments tab → 'Comments to Print on Requisition.' Add Title (CMC Lab), your name, and SRHS email.",tip:""},
+    {t:"Invoices over $5,000",d:"Must be approved by the director first. Route to Rachael Shadduck before submitting.",tip:""},
+    {t:"Save the requisition",d:"Save as PDF to Shared Drive → Company_Inv_PO → correct company folder.",tip:""},
+    {t:"Email AP and attach invoice",d:"Open invoice in Adobe. Right-click → Fill and Sign → add PO number. Email to AP Invoice with invoice attached.",tip:"Wait for the email that contains the PO number before sending to AP."}
+  ]},
+  {id:4,title:"Add or remove someone from a lab email group",icon:"ti-mail",iconClass:"pi-purple",desc:"Manage distribution group membership in Exchange Admin Center",steps:[
+    {t:"Open Exchange Admin Center",d:"Navigate to the Exchange Admin Center. Go to Recipients → Groups.",tip:""},
+    {t:"Search for CMC Lab groups",d:"Type CMC in the search bar. Three groups appear: _CMC Lab (main), _CMC Lab Phleb, _CMC Lab Techs.",tip:""},
+    {t:"Select group and click Edit",d:"Select the appropriate group. Click the Pencil/Edit icon. Navigate to the Membership section.",tip:"Everyone goes into _CMC Lab. Phlebotomists also into _CMC Lab Phleb. Techs also into _CMC Lab Techs."},
+    {t:"Add or remove",d:"Click + to add or – to remove. Type the staff member's name in the search field.",tip:""},
+    {t:"Select and confirm",d:"Click the correct name from results. Click Add. Confirm the name appears in the members list.",tip:""},
+    {t:"Save",d:"Click OK then Save. Changes take effect immediately.",tip:""},
+    {t:"Verify",d:"Send a test message to the group address to confirm the change worked.",tip:"This 30-second step prevents a lot of 'why am I not getting emails' calls later."}
+  ]},
+  {id:5,title:"UKG transfer — move an employee between cost centers",icon:"ti-arrows-transfer-up",iconClass:"pi-teal",desc:"Transfer an employee's UKG profile to a new department or cost center",steps:[
+    {t:"Confirm all transfer details in writing",d:"Verify employee name, current cost center, destination cost center, and effective date. Get written confirmation from both managers if cross-department.",tip:""},
+    {t:"Log in to UKG Workforce Central",d:"Open UKG from the Hub. Navigate to Administration → Employee Management.",tip:""},
+    {t:"Find the employee",d:"Search by name or employee ID. Verify hire date and current assignment before proceeding.",tip:""},
+    {t:"Initiate the transfer",d:"Select Transfer from the employee action menu. Enter the destination cost center code and effective date. Do not use a past date unless HR has authorized it.",tip:""},
+    {t:"Update job code if needed",d:"If the transfer involves a role change, update the job code at the same time. Notify payroll if the pay rate changes.",tip:""},
+    {t:"Submit for approval",d:"Route through the approval chain. Confirm approval before the effective date.",tip:""},
+    {t:"Verify after first payroll cycle",d:"Check that hours are charging to the correct cost center. This is the most common error point — always verify.",tip:"Set a calendar reminder for payroll day. This step is skipped most often and causes the most problems."}
+  ]},
+  {id:6,title:"Monthly Soft Reports — Transfusion Committee",icon:"ti-droplet",iconClass:"pi-blue",desc:"Generate and distribute monthly Transfusion Committee soft reports — due by the 5th of each month",steps:[
+    {t:"Log in to the Soft/Oracle system",d:"Access Soft from the clinical applications menu. Navigate to the Transfusion module.",tip:""},
+    {t:"Set report parameters",d:"Select the prior month date range. Select your facility. Choose the Transfusion Committee Summary report template.",tip:""},
+    {t:"Run and review",d:"Click Run/Generate. Review output for errors or outliers before distributing. Flag unusual values for medical director review.",tip:""},
+    {t:"Export as PDF",d:"Name the file: [SiteName]_TransfusionCommittee_[MonthYear]. Example: CMC_TransfusionCommittee_May2026",tip:""},
+    {t:"Save to shared drive",d:"Cherokee → QMP → Quality CMC → Transfusion Committee Reports → [Year]",tip:""},
+    {t:"Distribute",d:"Email to the Transfusion Committee distribution list. Note the month and any flagged items in the subject line. CC your medical director.",tip:""},
+    {t:"Document completion",d:"Note completion date in your monthly task tracker. Due by the 5th of each month.",tip:"Set a recurring calendar reminder for the 3rd of each month."}
+  ]},
+  {id:7,title:"Traveler onboarding — 10-day checklist",icon:"ti-clipboard-check",iconClass:"pi-green",desc:"Complete checklist for onboarding a travel tech — start 10 days before their first day",steps:[
+    {t:"Day -10: Initiate Epic access request",d:"Submit Epic access request to IT with role-based permissions. Specify the start date and required modules.",tip:"This takes time to process — 10 days is not too early."},
+    {t:"Day -7: Contact badge office",d:"Request badge creation. Provide the traveler's name, start date, agency, and required access areas.",tip:""},
+    {t:"Day -5: Create UKG profile",d:"Set up the UKG profile and assign to the correct cost center. Double-check the cost center code.",tip:"Verify the cost center code before entering — this is the most common error."},
+    {t:"Day -5: Confirm system access",d:"Verify email account creation is in progress. Confirm Compass and other required application access has been requested.",tip:""},
+    {t:"Day -3: Send orientation materials",d:"Email the traveler the orientation packet, parking info, dress code, and first-day contact.",tip:""},
+    {t:"Day -1: Confirm all access",d:"Call or email IT to confirm Epic access is active. Verify badge is ready. Confirm UKG assignment.",tip:"This 10-minute call prevents a 4-hour delay on day one."},
+    {t:"Day 1: Complete lab orientation",d:"Conduct lab-specific orientation. Review safety, emergency procedures, equipment, and workflow. Have traveler sign the orientation checklist.",tip:""},
+    {t:"Set 30- and 90-day check-ins",d:"Add calendar reminders for milestone conversations with the traveler.",tip:""}
+  ]},
+  {id:8,title:"Termination — same-day IT offboarding",icon:"ti-user-x",iconClass:"pi-coral",desc:"Remove all system access the same day as termination — in order",steps:[
+    {t:"Immediately: notify IT",d:"Contact IT immediately after the termination meeting. Provide the employee name, ID, and termination date.",tip:"Same-day offboarding only works if IT is notified within the hour."},
+    {t:"Collect badge and physical access items",d:"Collect badge, lab keys, and any other physical access items before the employee leaves the building.",tip:""},
+    {t:"Confirm Epic deactivation",d:"Follow up with IT to confirm Epic access has been deactivated. Request email confirmation for documentation.",tip:"Epic access left active after termination is an immediate HIPAA risk."},
+    {t:"Disable email account",d:"Notify email admin to disable the SRHS email account and set an out-of-office if needed.",tip:""},
+    {t:"Update UKG",d:"Update the employee's status in UKG. Coordinate with payroll on the final pay period.",tip:""},
+    {t:"Change shared passwords",d:"Identify and change any shared passwords or access codes. Reference your role-specific access list.",tip:"Maintain an updated shared access list for each role — this step is impossible without it."},
+    {t:"Document everything with timestamps",d:"Record each completed step with the time it was completed. This documentation supports the HR record.",tip:"Even a quick email to yourself documenting the steps and times is sufficient."}
+  ]}
 ];
 
-let activeCat = "all";
-let activeTab = "sit";
+let activeCat="all",activeTab="sit";
 
 function renderCats(){
-  document.getElementById("catGrid").innerHTML = categories.map(c=>`
+  document.getElementById("catGrid").innerHTML=categories.map(c=>`
     <button class="cat-card${c.id===activeCat?' active':''}" onclick="filterCat('${c.id}')">
       <div class="cat-icon"><i class="ti ${c.icon}"></i></div>
       <div class="cat-name">${c.name}</div>
@@ -457,35 +537,26 @@ function renderCats(){
 }
 
 function renderSits(list){
-  const el = document.getElementById("sitList");
-  if(!list.length){
-    el.innerHTML=`<div class="empty"><i class="ti ti-database-off"></i><p>No situations in this category yet.<br>Be the first to contribute one.</p></div>`;
-    return;
-  }
-  el.innerHTML = list.map(s=>`
+  const el=document.getElementById("sitList");
+  if(!list.length){el.innerHTML=`<div class="empty"><i class="ti ti-database-off"></i><p>No situations in this category yet.<br>Be the first to contribute one.</p></div>`;return;}
+  el.innerHTML=list.map(s=>`
     <div class="sit-card" onclick="openSit(${s.id})">
-      <div class="sit-header">
-        <div class="sit-title">${s.title}</div>
-        <span class="badge ${s.badge}">${s.badgeLabel}</span>
-      </div>
+      <div class="sit-header"><div class="sit-title">${s.title}</div><span class="badge ${s.badge}">${s.badgeLabel}</span></div>
       <div class="sit-preview">${s.preview}</div>
     </div>`).join("");
 }
 
 function filterCat(id){
-  activeCat=id;
-  renderCats();
-  const label = id==="all" ? "All situations" : categories.find(c=>c.id===id).name;
-  document.getElementById("sitListLabel").textContent = label;
-  renderSits(id==="all" ? situations : situations.filter(s=>s.cat===id));
+  activeCat=id;renderCats();
+  document.getElementById("sitListLabel").textContent=id==="all"?"All situations":categories.find(c=>c.id===id).name;
+  renderSits(id==="all"?situations:situations.filter(s=>s.cat===id));
 }
 
 function openSit(id){
-  const s = situations.find(x=>x.id===id);
+  const s=situations.find(x=>x.id===id);
   document.getElementById("sit-list-view").style.display="none";
-  const dv = document.getElementById("sit-detail-view");
-  dv.style.display="block";
-  document.getElementById("sitDetailTitle").textContent = s.title;
+  document.getElementById("sit-detail-view").style.display="block";
+  document.getElementById("sitDetailTitle").textContent=s.title;
   document.getElementById("sitDetailBody").innerHTML=`
     <div class="dsec"><div class="dsec-title"><i class="ti ti-file-description"></i> Situation</div><div class="dsec-body">${s.desc}</div></div>
     <div class="dsec"><div class="dsec-title"><i class="ti ti-users"></i> Key individuals involved</div><div class="dsec-body">${s.who}</div></div>
@@ -497,28 +568,26 @@ function openSit(id){
     </div>
     <div class="lesson-box"><div class="dsec-title"><i class="ti ti-bulb"></i> Lesson learned</div><div class="dsec-body">${s.lesson}</div></div>
     <div class="rec-box"><div class="dsec-title"><i class="ti ti-star"></i> Recommendation for future leaders</div><div class="dsec-body">${s.rec}</div></div>
-    <div class="meridian-box"><div class="meridian-label"><i class="ti ti-compass"></i> MERIDIAN insight</div><div class="meridian-body">${s.insight}</div></div>`;
+    <div class="insight-quote"><i class="ti ti-quote"></i><span>${s.quote}</span></div>
+    <div class="meridian-box"><div class="meridian-label"><i class="ti ti-compass"></i> MERIDIAN insight</div><div class="meridian-body">${s.insight}</div></div>
+    <div class="closing-line">${s.closing}</div>`;
 }
 
 function renderProcs(){
-  document.getElementById("procList").innerHTML = processes.map(p=>`
+  document.getElementById("procList").innerHTML=processes.map(p=>`
     <div class="proc-card" onclick="openProc(${p.id})">
       <div class="proc-icon ${p.iconClass}"><i class="ti ${p.icon}"></i></div>
-      <div class="proc-info">
-        <div class="proc-name">${p.title}</div>
-        <div class="proc-desc">${p.desc}</div>
-      </div>
+      <div class="proc-info"><div class="proc-name">${p.title}</div><div class="proc-desc">${p.desc}</div></div>
       <i class="ti ti-chevron-right proc-arrow"></i>
     </div>`).join("");
 }
 
 function openProc(id){
-  const p = processes.find(x=>x.id===id);
+  const p=processes.find(x=>x.id===id);
   document.getElementById("proc-list-view").style.display="none";
-  const dv = document.getElementById("proc-detail-view");
-  dv.style.display="block";
-  document.getElementById("procDetailTitle").textContent = p.title;
-  const steps = p.steps.map((s,i)=>`
+  document.getElementById("proc-detail-view").style.display="block";
+  document.getElementById("procDetailTitle").textContent=p.title;
+  const steps=p.steps.map((s,i)=>`
     <div class="step-item">
       <div class="step-num">${i+1}</div>
       <div class="step-body">
@@ -530,17 +599,12 @@ function openProc(id){
   document.getElementById("procDetailBody").innerHTML=`
     <div class="dsec" style="margin-bottom:1rem"><div class="dsec-body" style="color:var(--text2);font-size:13px">${p.desc}</div></div>
     ${steps}
-    <div class="meridian-box" style="margin-top:1rem"><div class="meridian-label"><i class="ti ti-compass"></i> Pro tip</div><div class="meridian-body">Complete each step before moving to the next. If you get stuck at any point, contact your supervisor or the system owner before attempting a workaround — workarounds create downstream problems that are harder to fix.</div></div>`;
+    <div class="meridian-box" style="margin-top:1rem"><div class="meridian-label"><i class="ti ti-compass"></i> Pro tip</div><div class="meridian-body">Complete each step before moving to the next. If you get stuck, contact your supervisor or the system owner before attempting a workaround — workarounds create downstream problems that are harder to fix.</div></div>`;
 }
 
 function backTo(type){
-  if(type==="sit"){
-    document.getElementById("sit-detail-view").style.display="none";
-    document.getElementById("sit-list-view").style.display="block";
-  } else {
-    document.getElementById("proc-detail-view").style.display="none";
-    document.getElementById("proc-list-view").style.display="block";
-  }
+  if(type==="sit"){document.getElementById("sit-detail-view").style.display="none";document.getElementById("sit-list-view").style.display="block";}
+  else{document.getElementById("proc-detail-view").style.display="none";document.getElementById("proc-list-view").style.display="block";}
 }
 
 function switchTab(tab){
@@ -553,46 +617,21 @@ function switchTab(tab){
 }
 
 function handleSearch(){
-  const q = document.getElementById("mainSearch").value.trim().toLowerCase();
-  if(!q) return;
-  const sr = document.getElementById("searchResults");
+  const q=document.getElementById("mainSearch").value.trim().toLowerCase();
+  if(!q)return;
+  const sr=document.getElementById("searchResults");
   sr.style.display="block";
-  const sm = situations.filter(s=>
-    s.title.toLowerCase().includes(q)||s.preview.toLowerCase().includes(q)||
-    s.desc.toLowerCase().includes(q)||s.lesson.toLowerCase().includes(q)||
-    s.cat.toLowerCase().includes(q)||s.badgeLabel.toLowerCase().includes(q));
-  const pm = processes.filter(p=>
-    p.title.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q)||
-    p.steps.some(st=>st.t.toLowerCase().includes(q)||st.d.toLowerCase().includes(q)));
+  const sm=situations.filter(s=>s.title.toLowerCase().includes(q)||s.preview.toLowerCase().includes(q)||s.desc.toLowerCase().includes(q)||s.lesson.toLowerCase().includes(q)||s.cat.toLowerCase().includes(q)||s.badgeLabel.toLowerCase().includes(q)||s.rec.toLowerCase().includes(q));
+  const pm=processes.filter(p=>p.title.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q)||p.steps.some(st=>st.t.toLowerCase().includes(q)||st.d.toLowerCase().includes(q)));
   let html=`<div class="results-label">Results for "<strong>${q}</strong>" &nbsp;·&nbsp; ${sm.length+pm.length} found</div>`;
-  if(pm.length){
-    html+=`<div class="section-label" style="margin-bottom:8px"><i class="ti ti-list-check" style="font-size:13px"></i> Process guides</div>`;
-    html+=`<div class="proc-list" style="margin-bottom:1rem">`+pm.map(p=>`
-      <div class="proc-card" onclick="switchTab('proc');openProc(${p.id})">
-        <div class="proc-icon ${p.iconClass}"><i class="ti ${p.icon}"></i></div>
-        <div class="proc-info"><div class="proc-name">${p.title}</div><div class="proc-desc">${p.desc}</div></div>
-        <i class="ti ti-chevron-right proc-arrow"></i>
-      </div>`).join("")+`</div>`;
-  }
-  if(sm.length){
-    html+=`<div class="section-label" style="margin-bottom:8px"><i class="ti ti-users" style="font-size:13px"></i> Leadership situations</div>`;
-    html+=`<div class="sit-list">`+sm.map(s=>`
-      <div class="sit-card" onclick="switchTab('sit');openSit(${s.id})">
-        <div class="sit-header"><div class="sit-title">${s.title}</div><span class="badge ${s.badge}">${s.badgeLabel}</span></div>
-        <div class="sit-preview">${s.preview}</div>
-      </div>`).join("")+`</div>`;
-  }
-  if(!sm.length&&!pm.length){
-    html+=`<div class="empty"><i class="ti ti-search-off"></i><p>Nothing found for "${q}".<br>This topic may not have been added yet — consider submitting it.</p></div>`;
-  }
+  if(pm.length){html+=`<div class="section-label" style="margin-bottom:8px"><i class="ti ti-list-check" style="font-size:13px"></i> Process guides</div><div class="proc-list" style="margin-bottom:1rem">`+pm.map(p=>`<div class="proc-card" onclick="switchTab('proc');openProc(${p.id})"><div class="proc-icon ${p.iconClass}"><i class="ti ${p.icon}"></i></div><div class="proc-info"><div class="proc-name">${p.title}</div><div class="proc-desc">${p.desc}</div></div><i class="ti ti-chevron-right proc-arrow"></i></div>`).join("")+`</div>`;}
+  if(sm.length){html+=`<div class="section-label" style="margin-bottom:8px"><i class="ti ti-users" style="font-size:13px"></i> Leadership situations</div><div class="sit-list">`+sm.map(s=>`<div class="sit-card" onclick="switchTab('sit');openSit(${s.id})"><div class="sit-header"><div class="sit-title">${s.title}</div><span class="badge ${s.badge}">${s.badgeLabel}</span></div><div class="sit-preview">${s.preview}</div></div>`).join("")+`</div>`;}
+  if(!sm.length&&!pm.length){html+=`<div class="empty"><i class="ti ti-search-off"></i><p>Nothing found for "${q}".<br>This topic may not have been added yet — consider submitting it.</p></div>`;}
   sr.innerHTML=html;
 }
 
 document.getElementById("mainSearch").addEventListener("keydown",e=>{if(e.key==="Enter")handleSearch()});
-
-renderCats();
-renderSits(situations);
-renderProcs();
+renderCats();renderSits(situations);renderProcs();
 </script>
 </body>
 </html>
