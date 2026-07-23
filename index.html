@@ -204,10 +204,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       </div>
     </div>
   </div>
-  <div class="footer-bar">
-    <span class="footer-text"><i class="ti ti-bulb" style="font-size:14px"></i> Have a situation or process to contribute to MERIDIAN?</span>
-    <button class="submit-btn" onclick="window.open('https://forms.cloud.microsoft/r/rqGg5yTpzm','_blank')"><i class="ti ti-plus"></i> Submit your experience</button>
-  </div>
   <div class="version-tag">MERIDIAN v1.3 · Lab Leadership Continuum · SRHS Laboratory Services · smccormick-lab.github.io/meridian</div>
 </div>
 
@@ -933,50 +929,50 @@ const processes = [
     {t:"Select the correct report",d:"Choose 'Productivity Six-Period Trend-Breakout with Variance UPDATED' from the report list.",tip:""},
     {t:"Run the report",d:"Click Run Report. The report downloads automatically in Excel format.",tip:""},
     {t:"Open and enter data",d:"Enter: Actual Worked FTEs (Current Period, Reporting Period, Fiscal YTD), Total Target Worked FTEs, FTE Variance fields, Education/Orientation Hours, and Overtime Hours.",tip:""},
-    {t:"Save your file",d:"Save to the Shared Drive under Company_Inv_PO following your site's folder naming convention.",tip:"Save immediately — don't leave it in your Downloads folder."}
+    {t:"Save report if needed",d:"Save the report if you need to keep a copy.",tip:""}
   ]},
   {id:2,title:"Submit a new position request in Phenom",icon:"ti-user-plus",iconClass:"pi-teal",desc:"Post a PRN or full-time lab position through the Phenom requisition system",steps:[
     {t:"Open Phenom",d:"Navigate to Phenom from the Hub: Applications → Phenom Requisition Center.",tip:""},
     {t:"Click Create and select the correct template",d:"Click the Create button (top right). Select the requisition template matching the position type.",tip:""},
-    {t:"Enter the job code and department code",d:"PRN: job code 0126 (Phlebotomy) or 1161 (hybrid Tech). Full-time Tech: job code 2740150. Department code for full-time Tech: 2740180.",tip:"Double-check the job code before submitting — wrong codes delay posting."},
+    {t:"Enter the job code and department code",d:"Enter the job code and department code for your campus and position type — check your site's job code list if unsure. For example, at CMC: PRN Phlebotomy is job code 0126, PRN hybrid Tech is 1161, and full-time Tech is job code 2740150 with department code 2740180.",tip:"Double-check the job code before submitting — wrong codes delay posting."},
     {t:"Set Job Category",d:"Select Allied Health Careers for tech positions, or Clinical Support for phlebotomy. Confirm all required fields are completed.",tip:""},
     {t:"Set up the Hiring Team",d:"Your name defaults as Hiring Manager. Add the recruiter's name in the Recruiter field.",tip:""},
-    {t:"Set the approval chain",d:"PRN: one approver (the recruiter). Full-time: three approvers in sequence. For full-time positions, also email Brian Webb — he is on the LMC and needs to be aware.",tip:"Full-time positions will not post until all three approvers clear it — submit early."},
+    {t:"Set the approval chain",d:"PRN: one approver (the recruiter). Full-time: three approvers in sequence. For full-time positions, also email the Campus Admin if on the Labor Committee — they need to be aware.",tip:"Full-time positions will not post until all three approvers clear it — submit early."},
     {t:"Submit and monitor",d:"PRN positions post as soon as the recruiter approves. Monitor status in your Phenom dashboard.",tip:""}
   ]},
-  {id:3,title:"Process a vendor invoice through RQC",icon:"ti-receipt",iconClass:"pi-amber",desc:"Submit Lab Corp, Cintas, Evoqua, or Eagle Express invoices through the Intra Requisition system",steps:[
-    {t:"Open RQC from the Hub",d:"Hub → Applications → Intra Requisition Center (RQC). Sign in with your SRHS credentials.",tip:""},
-    {t:"Detail Profile tab",d:"Enter Cost Default Vendor. Select PO Code: BILL. Enter your title (CMC Lab) and your name and email.",tip:""},
-    {t:"Special/Service Tab",d:"Item: unique invoice number. Description: invoice number and date. UOM: $. Cost: invoice amount. Account: use the list for the correct account code.",tip:""},
-    {t:"Add Comments",d:"Comments tab → 'Comments to Print on Requisition.' Add Title (CMC Lab), your name, and SRHS email.",tip:""},
-    {t:"Invoices over $5,000",d:"Must be approved by the director first. Route to Rachael Shadduck before submitting.",tip:""},
+  {id:3,title:"Process a vendor invoice",icon:"ti-receipt",iconClass:"pi-amber",desc:"Submit Lab Corp, Cintas, Evoqua, or Eagle Express invoices through the INFOR Requisition system",steps:[
+    {t:"Open the requisition system from the Hub",d:"Hub → Applications → INFOR Requisition Center. Sign in with your SRHS credentials.",tip:""},
+    {t:"Detail Profile tab",d:"Enter Cost Default Vendor. Select PO Code: BILL. Enter your title (e.g., CMC Lab) and your name and email.",tip:""},
+    {t:"Special/Service Tab",d:"Item: unique invoice number. Description: invoice number and date. UOM: enter unit of measure. Cost: invoice amount. Account: use the list for the correct account code.",tip:""},
+    {t:"Add Comments",d:"Comments tab → 'Comments to Print on Requisition.' Add Title (e.g., CMC Lab), your name, and SRHS email.",tip:""},
+    {t:"Invoices over $5,000",d:"Must be approved by the director first before submitting.",tip:""},
     {t:"Save the requisition",d:"Save as PDF to Shared Drive → Company_Inv_PO → correct company folder.",tip:""},
+    {t:"Submit after printing",d:"Print the requisition and submit it after printing.",tip:""},
     {t:"Email AP and attach invoice",d:"Open invoice in Adobe. Right-click → Fill and Sign → add PO number. Email to AP Invoice with invoice attached.",tip:"Wait for the email that contains the PO number before sending to AP."}
   ]},
   {id:4,title:"Add or remove someone from a lab email group",icon:"ti-mail",iconClass:"pi-purple",desc:"Manage distribution group membership in Exchange Admin Center",steps:[
     {t:"Open Exchange Admin Center",d:"Navigate to the Exchange Admin Center. Go to Recipients → Groups.",tip:""},
-    {t:"Search for CMC Lab groups",d:"Type CMC in the search bar. Three groups appear: _CMC Lab (main), _CMC Lab Phleb, _CMC Lab Techs.",tip:""},
-    {t:"Select group and click Edit",d:"Select the appropriate group. Click the Pencil/Edit icon. Navigate to the Membership section.",tip:"Everyone goes into _CMC Lab. Phlebotomists also into _CMC Lab Phleb. Techs also into _CMC Lab Techs."},
+    {t:"Search for your campus lab groups",d:"Type your campus abbreviation in the search bar. Three groups typically appear per site — for example, at CMC: _CMC Lab (main), _CMC Lab Phleb, _CMC Lab Techs.",tip:""},
+    {t:"Select group and click Edit",d:"Select the appropriate group. Click the Pencil/Edit icon. Navigate to the Membership section.",tip:"Everyone goes into the main lab group. Phlebotomists also into the Phleb group. Techs also into the Techs group (e.g., at CMC: _CMC Lab, _CMC Lab Phleb, _CMC Lab Techs)."},
     {t:"Add or remove",d:"Click + to add or – to remove. Type the staff member's name in the search field.",tip:""},
     {t:"Select and confirm",d:"Click the correct name from results. Click Add. Confirm the name appears in the members list.",tip:""},
     {t:"Save",d:"Click OK then Save. Changes take effect immediately.",tip:""},
-    {t:"Verify",d:"Send a test message to the group address to confirm the change worked.",tip:"This 30-second step prevents a lot of 'why am I not getting emails' calls later."}
+    {t:"Verify",d:"Verify that the people added to the group receive the email.",tip:"This 30-second step prevents a lot of 'why am I not getting emails' calls later."}
   ]},
   {id:5,title:"UKG transfer — move an employee between cost centers",icon:"ti-arrows-transfer-up",iconClass:"pi-teal",desc:"Transfer an employee's UKG profile to a new department or cost center",steps:[
-    {t:"Confirm all transfer details in writing",d:"Verify employee name, current cost center, destination cost center, and effective date. Get written confirmation from both managers if cross-department.",tip:""},
-    {t:"Log in to UKG Workforce Central",d:"Open UKG from the Hub. Navigate to Administration → Employee Management.",tip:""},
-    {t:"Find the employee",d:"Search by name or employee ID. Verify hire date and current assignment before proceeding.",tip:""},
-    {t:"Initiate the transfer",d:"Select Transfer from the employee action menu. Enter the destination cost center code and effective date. Do not use a past date unless HR has authorized it.",tip:""},
-    {t:"Update job code if needed",d:"If the transfer involves a role change, update the job code at the same time. Notify payroll if the pay rate changes.",tip:""},
-    {t:"Submit for approval",d:"Route through the approval chain. Confirm approval before the effective date.",tip:""},
-    {t:"Verify after first payroll cycle",d:"Check that hours are charging to the correct cost center. This is the most common error point — always verify.",tip:"Set a calendar reminder for payroll day. This step is skipped most often and causes the most problems."}
+    {t:"Log in to UKG and find the employee",d:"Log in to UKG → Manage Timecards. Change the time frame to the previous pay period or to the date when the transferred employee last worked. Search Hyperfind (the icon that appears in a triangle shape). Search \"transferred.\" Select \"All home and transferred in with the asterisk.\" Your employee should now be in your dropdown list.",tip:""},
+    {t:"Confirm department and job code",d:"You will need the department code and the job code to change in order to transfer the employee's time to the correct department and job code.",tip:""},
+    {t:"Locate the Transfer columns in the timecard",d:"Transfer is a column in the timecard, not a menu action. Each day has two In/Out pairs (before and after the employee's 30-minute break), and a Transfer column follows each pair — so there are two places to enter the transfer per day.",tip:"Don't stop after the first Transfer column — the second half of the shift needs it too, or only part of the day transfers correctly."},
+    {t:"Enter the transfer for the first segment (before break)",d:"In the Transfer column following the first Out time, click Choose/search and select the correct business structure line (e.g. SRHS/CMC/ALAB/2740150 Lab/LAB) along with the work rule and/or labor category, such as Charge or Preceptor if applicable.",tip:""},
+    {t:"Enter the transfer for the second segment (after break)",d:"In the Transfer column following the second Out time, enter the same business structure, work rule, and/or labor category so the time worked after the break also transfers correctly.",tip:""},
+    {t:"Save and verify",d:"Save and confirm that the information was saved correctly.",tip:""}
   ]},
   {id:6,title:"Monthly Soft Reports — Transfusion Committee",icon:"ti-droplet",iconClass:"pi-blue",desc:"Generate and distribute monthly Transfusion Committee soft reports — due by the 5th of each month",steps:[
     {t:"Log in to the Soft/Oracle system",d:"Access Soft from the clinical applications menu. Navigate to the Transfusion module.",tip:""},
     {t:"Set report parameters",d:"Select the prior month date range. Select your facility. Choose the Transfusion Committee Summary report template.",tip:""},
     {t:"Run and review",d:"Click Run/Generate. Review output for errors or outliers before distributing. Flag unusual values for medical director review.",tip:""},
     {t:"Export as PDF",d:"Name the file: [SiteName]_TransfusionCommittee_[MonthYear]. Example: CMC_TransfusionCommittee_May2026",tip:""},
-    {t:"Save to shared drive",d:"Cherokee → QMP → Quality CMC → Transfusion Committee Reports → [Year]",tip:""},
+    {t:"Save to shared drive",d:"Save to your site's shared drive under the Quality folder for your campus (e.g., at CMC: Cherokee → QMP → Quality CMC → Transfusion Committee Reports → [Year]).",tip:""},
     {t:"Distribute",d:"Email to the Transfusion Committee distribution list. Note the month and any flagged items in the subject line. CC your medical director.",tip:""},
     {t:"Document completion",d:"Note completion date in your monthly task tracker. Due by the 5th of each month.",tip:"Set a recurring calendar reminder for the 3rd of each month."}
   ]},
@@ -1074,8 +1070,7 @@ function openProc(id){
     </div>`).join("");
   document.getElementById("procDetailBody").innerHTML=`
     <div class="dsec" style="margin-bottom:1rem"><div class="dsec-body" style="color:var(--text2);font-size:13px">${p.desc}</div></div>
-    ${steps}
-    <div class="meridian-box" style="margin-top:1rem"><div class="meridian-label"><i class="ti ti-compass"></i> Pro tip</div><div class="meridian-body">Complete each step before moving to the next. If you get stuck, contact your supervisor or the system owner before attempting a workaround — workarounds create downstream problems that are harder to fix.</div></div>`;
+    ${steps}`;
 }
 
 function backTo(type){
